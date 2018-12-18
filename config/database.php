@@ -29,7 +29,7 @@
 		$host = "ec2-23-23-235-86.compute-1.amazonaws.com";
 		$user = "vytogaqpgryrfs";
 		$password = "fa64d7f533ccda8b6f7d55e14412d90b76d29b0cc123b1ceba2ca26aa1511fea";
-		$dbname = "dcps966p2ecrlu";
+		$dbname = "postgresql-animate-62653";
 		$port = "5432";
 		public $conn;
 		public function getConnection()
