@@ -38,7 +38,7 @@
 			$this->conn = null;
 			try{
 				//Set DSN data source name
-				$dsn = "pgsql:host=" . $host . ";port=5432;dbname=" . $dbname . ";user=" . $user . ";password=" . $password . ";";
+				$dsn = "pgsql:host=" . $this->host . ";port=". $this->$port .";dbname=" . $this->$dbname . ";user=" . $this->$user . ";password=" . $this->$password . ";";
 				//create a pdo instance
 				$pdo = new PDO($dsn);
 				$pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
