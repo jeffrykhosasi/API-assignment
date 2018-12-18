@@ -30,7 +30,7 @@
 		private $user = "vytogaqpgryrfs";
 		private $password = "fa64d7f533ccda8b6f7d55e14412d90b76d29b0cc123b1ceba2ca26aa1511fea";
 		private $dbname = "dcps966p2ecrlu";
-		private $port = "5432";
+		private $port = 5432;
 		public $conn;
 
 		public function getConnection()
