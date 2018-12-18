@@ -40,7 +40,7 @@
 				//Set DSN data source name
 				$dsn = "pgsql:host=" . $this->host . ";port=". $this->$port .";dbname=" . $this->$dbname . ";user=" . $this->$user . ";password=" . $this->$password . ";";
 				//create a pdo instance
-				$pdo = new PDO($dsn);
+				$pdo = new PDO($dsn, $this->user, $this->password);
 				$pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
 				$pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
 				$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
