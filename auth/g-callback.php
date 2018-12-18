@@ -7,7 +7,7 @@
 		$token = $gClient->fetchAccessTokenWithAuthCode($_GET['code']); //mengirim auth code untuk menerima access token
 		$_SESSION['access_token'] = $token; //pengesetan access token
 	} else {
-		header('Location: login.php'); //memberikan http header kepada login.php
+		header('Location: ../index.php'); //memberikan http header kepada login.php
 		exit();
 	}
 

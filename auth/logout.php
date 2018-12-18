@@ -3,6 +3,6 @@
 	unset($_SESSION['access_token']); //token dinon aktifkan
 	$gClient->revokeToken(); //menghancurkan token
 	session_destroy();
-	header('Location: login.php'); //menuju login.php
+	header('Location: ../index.php'); //menuju login.php
 	exit();
 ?>

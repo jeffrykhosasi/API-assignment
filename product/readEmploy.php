@@ -2,7 +2,7 @@
 session_start(); //start
 include '../auth/info.php';
 if (!isset($_SESSION['access_token'])) { //jika tidak memiliki access token
-    header('Location: ../auth/login.php'); //kembali ke login.php
+    header('Location: ../index.php'); //kembali ke login.php
     exit();
 }
 
