@@ -30,7 +30,7 @@
 		private $user = "vytogaqpgryrfs";
 		private $password = "fa64d7f533ccda8b6f7d55e14412d90b76d29b0cc123b1ceba2ca26aa1511fea";
 		private $dbname = "dcps966p2ecrlu";
-		private $port = 5432;
+		private $port = "5432";
 		public $conn;
 
 		public function getConnection()
@@ -40,12 +40,12 @@
 				//Set DSN data source name
 				$dsn = "pgsql:host=" . $this->host . ";port=" . $this->$port . ";dbname=" . $this->$dbname . ";user=" . $this->$user . ";password=" . $this->$password . ";";
 				//create a pdo instance
-				$pdo = new PDO($dsn, $this->user, $this->password);
-				$pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
-				$pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
-				$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+				$conn = new PDO($dsn, $this->user, $this->password);
+				$conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
+				$conn->setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
+				$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		   }
-		   		catch (PDOException $e) {
+		   	catch (PDOException $e) {
 		   		echo 'Connection failed: ' . $e->getMessage();
 		   }
 			return $this->conn;
