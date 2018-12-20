@@ -19,7 +19,7 @@
         header('Location: ../product/readManager.php');
         exit();
     }
-    elseif(($_SESSION['givenName'] == "BIST League")&&($_SESSION['familyName'] == "2018"))
+    else
     {
         header('Location: ../product/readEmploy.php');
         exit();
