@@ -40,7 +40,7 @@
 				//Set DSN data source name
 				$dsn = "pgsql:host=ec2-23-23-235-86.compute-1.amazonaws.com; port=5432; dbname=dcps966p2ecrlu; user=vytogaqpgryrfs; password=fa64d7f533ccda8b6f7d55e14412d90b76d29b0cc123b1ceba2ca26aa1511fea;";
 				//create a pdo instance
-				$conn = new PDO($dsn, $this->user, $this->password);
+				$conn = new PDO($dsn);
 				$conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
 				$conn->setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
 				$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
